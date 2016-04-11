@@ -10,8 +10,8 @@ Crypto.prototype.normalizePlaintext = function() {
 
 
 Crypto.prototype.size = function(){
-	var x = this.message.nomralizePlaintext().length;
-	return Math.floor(Math.sqrt(x));
+	var x = this.nomralizePlaintext().length;
+	return Math.ceil(Math.sqrt(x));
 
 };
 
