@@ -8,4 +8,11 @@ Crypto.prototype.normalizePlaintext = function() {
 	I
 };
 
+
+Crypto.prototype.size = function(){
+	var x = this.message.nomralizePlaintext().length;
+	return Math.floor(Math.sqrt(x));
+
+};
+
 module.exports = Crypto;
