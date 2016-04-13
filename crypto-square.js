@@ -15,4 +15,22 @@ Crypto.prototype.size = function(){
 
 };
 
+Crypto.prototype.plaintextSegments = function(){
+	var x = this.normalizePlaintext();
+	var squareSize = this.size();
+	var square = [];
+	
+	for(var i = 0; i < x.length; x = x + squareSize){
+
+		if(x.slice(i, squareSize).length != squareSize){
+			square.push(x.slice( i, 0));
+		}
+		else
+			square.push(x.slice(i, squareSize));
+	}
+
+	return square;
+
+];
+
 module.exports = Crypto;
