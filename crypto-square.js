@@ -33,4 +33,19 @@ Crypto.prototype.plaintextSegments = function(){
 
 ];
 
+
+Crypto.prototype.ciphertext = function() {
+
+	var ct = "";
+	var size = this.size();
+	var segs = this.plaintextSegments();
+
+	for(var i = 0; i < size; i += 1)
+		for(var j = 0; j < segs.length; j += 1)
+			ct += segs[j].charAt(i);
+	
+	return ct;
+
+}
+
 module.exports = Crypto;
